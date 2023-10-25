@@ -1,0 +1,42 @@
+:root {
+    --primary: rgb(12, 9, 26);
+    --secondary: rgb(255, 253, 253);
+    --dark-secondary: rgb(175, 175, 175);
+    --tertiary: rgb(197, 53, 53);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.socials-component {
+    width: max-content;
+    position: sticky;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.tabs {
+    width: max-content;
+    padding-left: .3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    translate: -50%;
+    transition: 300ms ease-in-out;
+}
+
+.tabs:hover {
+    translate: 0%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    .socials-component {
+        display: none;
+    }
+}

@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@400;600;800&family=Poppins:wght@300;400;600;800&display=swap');
+:root {
+    --primary: rgb(12, 9, 26);
+    --secondary: rgb(255, 253, 253);
+    --dark-secondary: rgb(175, 175, 175);
+    --tertiary: rgb(197, 53, 53);
+}
+#root {
+    position: relative;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--secondary);
+    background: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero,
+/* .skills-section, */
+.about-section,
+.work-section,
+.form-section {
+    min-height: calc(70vh);
+}
+
+.hero {
+    max-width: 800px;
+    min-height: 400px;
+    margin: auto;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: 30%;
+    align-items: start;
+    /* text-align: center; */
+}
+
+.greeting {
+    color: var(--tertiary);
+}
+
+.name {
+    color: var(--secondary);
+    margin-bottom: 0rem;
+    font-family: 'Lisu Bosa', serif;
+    font-size: 2.5rem;
+}
+
+.hero-about {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--dark-secondary);
+}
+
+.hero-more {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark-secondary);
+}
+
+.view-work {
+    margin-top: 3rem;
+    border: 1px solid var(--tertiary);
+    padding: .5rem 1rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.view-work:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    border: 1px solid var(--secondary);
+}
+
+.right-arrow {
+    font-size: 1rem;
+}
+
+.skills-section {
+    /* border: 1px solid var(--secondary); */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cards {
+    border: 1px solid var(--secondary);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    color: var(--dark-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 100ms ease-in-out;
+}
+
+.cards:hover {
+    cursor: pointer;
+    scale: 105%;
+}
+
+.icons {
+    font-size: 3rem;
+    color: var(--secondary);
+}
+
+.medium-icons {
+    font-size: 2rem;
+}
+
+.small-icons {
+    font-size: 1.5rem;
+}
+
+.about-section {
+    max-width: 900px;
+    padding: 0 1.5rem;
+    margin: auto;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    text-align: right;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    width: max-content;
+    font-size: 3rem;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+    border-bottom: 3px solid var(--tertiary);
+}
+
+.right {
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.work-section {
+    padding:  0 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.work-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.work-card {
+    width: 250px;
+    border: 1px solid var(--secondary);
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms ease-in-out;
+}
+
+.countries {
+    background-image: url(./assets/images/countries.png);
+    background-size: contain;  
+}
+
+.commerce-app {
+    background-image: url(./assets/images/ecommerceApp.png);
+    background-size: contain;  
+    background-repeat: no-repeat;
+}
+
+.podcast-img {
+    background-image: url(./assets/images/podcast-img.png);
+    background-size: cover;  
+    background-repeat: no-repeat;
+}
+
+.work-card:hover .action-btns{
+    display: flex;
+}
+
+/* Add the blur effect */
+.work-card:hover .image{
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.action-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 50px; 
+}
+
+.view {
+    background-color: var(--primary);
+    padding: .3rem .6rem;
+    border: 1px solid var(--dark-secondary);
+    border-radius: 10px;
+}
+
+.view:hover {
+    cursor: pointer;
+}
+
+.info {
+    padding: .6rem;
+}
+
+.proj-name {
+    font-size: 1.5rem;
+}
+
+.tools {
+    margin-top: 1rem;
+}
+
+
+.form-section {
+    max-width: 900px;
+    margin: auto;    
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.contact {
+    align-self: center  ;
+}
+
+.form label {
+    margin-bottom: 1rem;
+}
+
+.email  {
+    width: 300px;
+    height: 2.5rem;
+    outline: none;
+    border-radius: 5px;
+    padding: .3rem;
+    font-size: 1.2rem;
+}
+
+.textarea {
+    width: 300px;
+    height: 100px;
+    outline: none;
+    border-radius: 5px;
+    padding: .3rem;
+    font-size: 1.2rem;
+}
+
+.submit-form {
+    width: max-content;
+    border: 1px solid var(--tertiary);
+    padding: .5rem 1rem;
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+.submit-form:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
+    border: 1px solid var(--secondary);
+}
+
+.social {
+    display: none;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.tab:hover {
+    cursor: pointer;
+    scale: 105%;
+    transition: all 200ms ease-out;
+}
+
+
+@media screen and (max-width:500px) {
+    
+
+    .hero {
+        padding: 4rem 2rem;
+    }
+    
+    .hero-about {
+        line-height: .9;
+        margin-bottom: 1rem;
+    }
+
+    .about-section {
+        gap: 1rem;
+        padding: 0 1.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        align-self: start;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .social {
+        display: flex;
+    }
+}
