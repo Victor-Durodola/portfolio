@@ -283,7 +283,11 @@ html {
     margin-bottom: 1rem;
 }
 
-.email  {
+.name {
+    color: inherit;
+}
+
+.email, .client-name {
     width: 300px;
     height: 2.5rem;
     outline: none;

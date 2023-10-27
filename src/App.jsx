@@ -148,7 +148,10 @@ function App() {
 
       <section className='form-section' id='form-section'>
         <h2 className='heading contact'>Contact me</h2>
-        <form action="#" className='form'>
+        <form method="POST" action="https://getform.io/f/b4bcecac-e426-4b32-905d-d99827f7546a" className='form'>
+          <label htmlFor="client-name">
+            <input type="text" id='client-name' className='client-name' placeholder='name'/>
+          </label>
           <label htmlFor="email">
             <input type="email" id='email' className='email' placeholder='email'/>
           </label>
